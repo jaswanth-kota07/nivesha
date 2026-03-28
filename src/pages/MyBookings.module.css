@@ -1,0 +1,114 @@
+.bookingsContainer {
+    padding: 3rem 1.5rem;
+    min-height: calc(100vh - var(--navbar-height));
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--border);
+}
+
+.emptyIcon {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.emptyState h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.emptyState p {
+    color: var(--text-muted);
+}
+
+.bookingsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.bookingCard {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bookingCard:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.bookingHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.bookingHeader h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-main);
+    padding-right: 1rem;
+}
+
+.amount {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.bookingDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.bookingDetails p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.bookingDetails strong {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.bookingId {
+    margin-top: 1rem !important;
+    font-size: 0.8rem !important;
+    font-family: monospace;
+    opacity: 0.7;
+}
+
+.timestamp {
+    font-size: 0.8rem !important;
+    opacity: 0.6;
+}

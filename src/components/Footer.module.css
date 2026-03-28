@@ -1,0 +1,65 @@
+.footer {
+    background-color: #0b1513;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .footerContent {
+        flex-direction: row;
+    }
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.niveshaText {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+
+.primaryText {
+    color: var(--primary);
+}
+
+.tagline {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: var(--primary);
+}

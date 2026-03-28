@@ -1,0 +1,251 @@
+.container {
+    padding: 3rem 1.5rem;
+    max-width: 1000px;
+}
+
+.header {
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .dashboardGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .balanceCard {
+        grid-column: span 2;
+    }
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+}
+
+.cardTitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.balanceAmount {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.balanceStats {
+    margin-bottom: 2rem;
+}
+
+.statPositive {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--primary);
+    background-color: rgba(72, 166, 111, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.withdrawBtn {
+    margin-top: auto;
+    align-self: flex-start;
+    background-color: var(--text-main);
+    color: var(--bg-dark);
+    padding: 0.75rem 2rem;
+}
+
+.withdrawBtn:hover {
+    background-color: #e0e0e0;
+}
+
+.subAmount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.subText {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.chartMock {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 60px;
+    gap: 4px;
+    margin-top: auto;
+}
+
+.bar {
+    flex: 1;
+    background-color: var(--border);
+    border-radius: 2px 2px 0 0;
+    transition: height 1s ease-out;
+}
+
+.ctaCard {
+    background: linear-gradient(135deg, rgba(72, 166, 111, 0.2), rgba(16, 30, 28, 0.5));
+    border-color: rgba(72, 166, 111, 0.3);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ctaCard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.ctaCard p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.ctaBtn {
+    width: 100%;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.transactionsList {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.transactionItem {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.2s;
+}
+
+.transactionItem:last-child {
+    border-bottom: none;
+}
+
+.transactionItem:hover {
+    background-color: var(--bg-card-hover);
+}
+
+.txIconWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.txIconIn {
+    color: var(--primary);
+}
+
+.txIconOut {
+    color: #ff6b6b;
+}
+
+.txInfo {
+    flex: 1;
+}
+
+.txTitle {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+}
+
+.txDate {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.txStatus {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 2rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .txStatus {
+        display: none;
+    }
+}
+
+.statusCompleted {
+    color: var(--primary);
+}
+
+.statusTextCompleted {
+    color: var(--primary);
+}
+
+.statusProcessing {
+    color: #fca311;
+}
+
+.statusTextProcessing {
+    color: #fca311;
+}
+
+.txAmount {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.amountPositive {
+    color: var(--primary);
+}

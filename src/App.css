@@ -1,0 +1,11 @@
+/* No specific App-level CSS needed right now. Everything is in components or index.css. */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: var(--navbar-height);
+}
