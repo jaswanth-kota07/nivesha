@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -7,11 +8,15 @@ import ListSpace from './pages/ListSpace';
 import Earnings from './pages/Earnings';
 import MyBookings from './pages/MyBookings';
 import { AppProvider } from './context/AppContext';
+import SplashScreen from './components/SplashScreen';
 import './App.css';
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
   return (
     <AppProvider>
+      {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
       <Router>
         <div className="app-container">
           <Navbar />

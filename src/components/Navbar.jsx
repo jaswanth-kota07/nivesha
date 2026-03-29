@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Home, Compass, PlusSquare, Wallet, Menu, X, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import styles from './Navbar.module.css';
+import BrandLogo from './BrandLogo';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,16 +21,8 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={`container ${styles.navContainer}`}>
-                <Link to="/" className={styles.logo}>
-                    <span className={styles.iconContainer}>
-                        {/* Simple CSS logo shape */}
-                        <span className={styles.dot}></span>
-                        <span className={styles.slash}></span>
-                        <span className={styles.dot}></span>
-                    </span>
-                    <span className={styles.niveshaText}>
-                        n<span className={styles.primaryText}>i</span>vesha
-                    </span>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                    <BrandLogo size="normal" />
                 </Link>
 
                 {/* Desktop Menu */}

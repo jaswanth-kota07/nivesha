@@ -1,0 +1,66 @@
+.logoLockup {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    user-select: none;
+}
+
+.topRow {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svgIcon {
+    width: 32px;
+    height: 32px;
+}
+
+.brandName {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.greenI {
+    color: var(--primary);
+}
+
+.tagline {
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-family: 'Georgia', serif; /* Serif-like in the image */
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 2px;
+    margin-right: -2px;
+}
+
+/* Modifier for SplashScreen */
+.large .svgIcon {
+    width: 80px;
+    height: 80px;
+}
+
+.large .topRow {
+    gap: 16px;
+}
+
+.large .brandName {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+}
+
+.large .tagline {
+    font-size: 1.5rem;
+    margin-top: 4px;
+    margin-right: -4px;
+}

@@ -28,7 +28,7 @@ const SpaceCard = ({ space }) => {
                 </div>
 
                 <div className={styles.amenities}>
-                    {space.amenities.map((amenity, index) => (
+                    {space.amenities?.map((amenity, index) => (
                         <span key={index} className={styles.amenity}>
                             {amenity === 'WiFi' && <Wifi size={14} />}
                             {amenity === 'Accessibility' && <Accessibility size={14} />}

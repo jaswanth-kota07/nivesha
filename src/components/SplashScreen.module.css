@@ -1,0 +1,70 @@
+.splashContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: logoIntro 2.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+.logoIcon {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.logoText {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin: 0;
+  /* subtle text glow to look premium */
+  text-shadow: 0 0 20px rgba(72, 166, 111, 0.4);
+}
+
+@keyframes logoIntro {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    transform: scale(1.05); /* Quick pop */
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1); /* Settle */
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1); /* Hold */
+    opacity: 1;
+  }
+  85% {
+    transform: scale(0.9); /* Anticipation before big zoom out */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(30); /* Huge zoom that acts as a transition */
+    opacity: 0;
+  }
+}
