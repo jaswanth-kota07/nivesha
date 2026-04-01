@@ -20,14 +20,17 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
-    position: sticky;
-    top: calc(var(--navbar-height) + 1.5rem);
+    position: relative;
+    z-index: 1;
 }
 
 @media (min-width: 900px) {
     .sidebar {
         width: 300px;
         flex-shrink: 0;
+        position: sticky;
+        top: calc(var(--navbar-height) + 1.5rem);
+        z-index: 2;
     }
 }
 
